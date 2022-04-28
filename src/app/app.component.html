@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="content" role="main">
+    <div class="row">
+      <div class="col-3 form-group">
+        <input
+          type="search"
+          class="form-control"
+          id="search-text"
+          aria-describedby="search-text"
+          placeholder="Enter title to search"
+          autofocus
+          (keyup)="onSearch($event)"
+        >
+      </div>
+
+      <div class="col" >
+        <div class="dropdown">
+          <button
+            class="btn btn-secondary btn-sm dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            style="float: right"
+          >
+            {{ preselectedType | titlecase }}
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li *ngFor="let type of types">
+              <a
+                class="dropdown-item"
+                (click)="selectedDropdownBtnType(type.id)"
+              >{{ type.id | titlecase }}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="table">
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Created by</th>
+        <th scope="col">Modified by</th>
+        <th scope="col">Type</th>
+        <th scope="col">Status</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let userFiles of files; let i = index;">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ userFiles.title }}</td>
+        <td>
+          {{ userFiles.createdByUser?.givenName }}
+          {{ userFiles.createdByUser?.familyName }}
+        </td>
+        <td>
+          {{ userFiles.modifiedByUser?.givenName }}
+          {{ userFiles.modifiedByUser?.familyName }}
+        </td>
+        <td>{{ userFiles.type | titlecase }}</td>
+        <td [ngStyle]="{'color': getStatusColor(userFiles.status)}">
+          {{ userFiles.status }}
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
