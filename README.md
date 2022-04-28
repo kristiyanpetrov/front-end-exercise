@@ -1,27 +1,41 @@
-# FrontEndExercise
+# Foolproof front-end engineering technical exercise
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
+Create a web app that will display some information from the provided API. You are welcome to use any 
+framework (or not) you prefer and feel free to use an accelerator (eg Create React App) to get you 
+started quickly. It is up to you to decide if you want to use Typescript or not (we're happy either way!).
 
-## Development server
+## API
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+To use the server:
 
-## Code scaffolding
+```bash
+cd api
+npm install
+node index.js
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The server will now listen at http://localhost:3001 and you can try the 3 different responses from the different endpoints:
 
-## Build
+- Users: http://localhost:3001/Users
+- Files: http://localhost:3001/Files
+- Types: http://localhost:3001/Types
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## The App
 
-## Running unit tests
+Create a web app that displays the Users, the Files and the Types.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+For the Files we would like to show the name of the user that updated and created the file and also type of the file.
 
-## Running end-to-end tests
+For the Types we would like to categorise the Files by Type.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Bonus question: create a search page or a global search box where we will be able to search for all the files by name.
 
-## Further help
+## What you have to do
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+As an app this should be straightforward to create, 3 end points and 3 sets of data. You can decide how to display the information however you think it is best.
+
+You can create your own visuals, feel free to go as far or not as you like. What we first want to see is an understanding of basic engineering practices and how to build an app well. We would like to see what your key strengths are, perhaps you are an expert in state mangement, maybe you are a CSS wizard or maybe you write uber-efficient Javascript. Nobody knows everything so just express yourself and show us what you are great at!
+
+We do not expect you to spend more than a handful of hours on this, use the time wisely to expose your key strengths. Finally, feel free to add your thoughts and comments in a file so that we can discuss together and build on the app further.
+
+Thank you very much for taking the time, we look forward to seeing your creation!
