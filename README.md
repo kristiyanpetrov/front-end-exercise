@@ -1,6 +1,6 @@
 # front-end-exercise
 
-# Foolproof front-end engineering technical exercise
+# front-end engineering technical exercise
 
 Create a web app that will display some information from the provided API. You are welcome to use any 
 framework (or not) you prefer and feel free to use an accelerator (eg Create React App) to get you 
@@ -14,6 +14,11 @@ To use the server:
 cd api
 npm install
 node index.js
+```
+```bash
+To use the client:
+cd front-end-exercise
+ng s
 ```
 
 The server will now listen at http://localhost:3001 and you can try the 3 different responses from the different endpoints:
