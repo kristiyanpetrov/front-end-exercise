@@ -1,5 +1,3 @@
-# front-end-exercise
-
 # front-end engineering technical exercise
 
 Create a web app that will display some information from the provided API. You are welcome to use any 
